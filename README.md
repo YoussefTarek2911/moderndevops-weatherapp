@@ -10,12 +10,7 @@ A fully containerized microservices-based weather application built with a moder
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Environment Variables](#environment-variables)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Troubleshooting](#troubleshooting)
-- [Future Improvements](#future-improvements)
-- [License](#license)
+
 
 ---
 

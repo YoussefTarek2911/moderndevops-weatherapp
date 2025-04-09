@@ -22,14 +22,14 @@ A fully containerized microservices-based weather application built with a moder
 
 ## 🚀 Overview
 
-This application lets users log in and view real-time weather updates using a user-friendly UI. It’s split into three main microservices:
+This application allows users to log in and view real-time weather updates using a clean UI. It’s split into modular microservices:
 
-- `auth`: User authentication service written in Go
-- `weather`: Flask-based microservice that fetches weather data
-- `ui`: Frontend app (React or Vanilla JS)
-- `db`: MySQL database
+- `auth`: User authentication service (Go)
+- `weather`: Weather data fetcher (Flask)
+- `ui`: Frontend interface (React or Vanilla JS)
+- `db`: MySQL database service
 
-All services are containerized and orchestrated via **Docker Compose**.
+All are containerized using Docker and orchestrated with Docker Compose.
 
 ---
 
@@ -53,6 +53,8 @@ All services are containerized and orchestrated via **Docker Compose**.
     │  MySQL │                     │ Weather API│
     └────────┘                     └────────────┘
 
+
+
 ---
 
 ## 🛠️ Tech Stack
@@ -60,14 +62,16 @@ All services are containerized and orchestrated via **Docker Compose**.
 | Layer        | Tech                                  |
 |--------------|----------------------------------------|
 | Frontend     | JavaScript (React or Vanilla JS)       |
-| Auth Service | Go, MySQL driver                       |
+| Auth Service | Go + MySQL driver                      |
 | Weather API  | Python Flask                           |
 | Database     | MySQL 8.0                              |
-| Containerization | Docker, Docker Compose            |
+| Containers   | Docker, Docker Compose                 |
 
 ---
 
 ## 📁 Project Structure
+
+
 
 
 ---
@@ -91,18 +95,14 @@ AUTH_PORT=8080
 WEATHER_HOST=weather
 WEATHER_PORT=5000
 APIKEY=your-weather-api-key
-# 1. Clone the repo
+
+
 git clone https://github.com/your-username/modern-devops-weatherapp.git
 cd modern-devops-weatherapp
 
-# 2. Create the .env file
+
 notepad .env
-# (Paste the environment variables shown above)
+# Or use your preferred editor
 
-# 3. Build and start the app
+
 docker-compose up --build -d
-
-# 4. Open the app
-http://localhost:3000
-
-

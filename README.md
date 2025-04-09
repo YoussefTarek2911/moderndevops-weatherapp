@@ -7,7 +7,6 @@ A fully containerized microservices-based weather application built with a moder
 ## 📌 Table of Contents
 
 - [Overview](#overview)
-- [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Environment Variables](#environment-variables)
@@ -33,30 +32,6 @@ All are containerized using Docker and orchestrated with Docker Compose.
 
 ---
 
-## 🧱 Architecture
-
-                    ┌───────────────┐
-                    │    Browser    │
-                    └──────┬────────┘
-                           │
-                   ┌───────▼────────┐
-                   │     UI (3000)  │
-                   └──────┬─────────┘
-         ┌───────────────┼───────────────┐
-         │                               │
-  ┌──────▼──────┐                 ┌──────▼──────┐
-  │  Auth (8080)│                 │ Weather (5000)│
-  └──────┬──────┘                 └──────┬───────┘
-         │                               │
-         ▼                               ▼
-    ┌────────┐                     ┌────────────┐
-    │  MySQL │                     │ Weather API│
-    └────────┘                     └────────────┘
-
-
-
----
-
 ## 🛠️ Tech Stack
 
 | Layer        | Tech                                  |
@@ -70,8 +45,6 @@ All are containerized using Docker and orchestrated with Docker Compose.
 ---
 
 ## 📁 Project Structure
-
-
 
 
 ---
@@ -97,12 +70,12 @@ WEATHER_PORT=5000
 APIKEY=your-weather-api-key
 
 
+# 1. Clone the repository
 git clone https://github.com/your-username/modern-devops-weatherapp.git
 cd modern-devops-weatherapp
 
-
+# 2. Create the .env file
 notepad .env
-# Or use your preferred editor
 
-
+# 3. Build and run the services
 docker-compose up --build -d
